@@ -491,14 +491,4 @@ The resulting application is small enough to understand and demonstrate while st
 
 ---
 
-## 22. Student Details
 
-Complete these fields before final submission:
-
-```text
-Student Name    : ______________________________
-Register Number : ______________________________
-Course / Class  : ______________________________
-Institution     : ______________________________
-Academic Year   : ______________________________
-```
