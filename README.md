@@ -96,11 +96,6 @@ The project aims to:
 | Git | Version control |
 | GitHub | Source-code repository and submission |
 
-### Important implementation note
-
-The project was originally structured around database-style persistence, but the final executable version uses a dependency-free local serialized data store. This was done so the application can run in a restricted environment without an external database server or third-party JDBC dependency.
-
-Therefore, the current executable project **does not require SQLite or a JDBC driver at runtime**.
 
 ---
 
@@ -125,16 +120,14 @@ javac -version
 mvn -version
 ```
 
-> If Maven is not installed, the application can still be compiled and executed directly with `javac` and `java`, as demonstrated below.
 
----
 
 ## 6. Project Setup
 
 Clone the repository and move into the project directory:
 
 ```bash
-git clone <YOUR_PUBLIC_GITHUB_REPOSITORY_URL>
+git clone <https://github.com/SAYAN754311/LIBRARY-MANAGEMENT-SYSTEM.git>
 cd LibraryManagementSystem
 ```
 
@@ -384,50 +377,7 @@ Contains reusable application logic:
 
 `Main.java` provides the command-line menu, user interaction, and module navigation.
 
----
-
-## 15. Project Structure
-
-```text
-LibraryManagementSystem/
-├── .github/workflows/ci.yml
-├── .gitignore
-├── .gitattributes
-├── LICENSE
-├── README.md
-├── statement.md
-├── STUDENT_DETAILS.md
-├── GITHUB_UPLOAD.md
-├── Project_Report.pdf
-├── SUBMISSION_CHECKLIST.md
-├── pom.xml
-├── data/
-│   └── .gitkeep
-├── docs/
-│   ├── REPORT_TEMPLATE.md
-│   ├── class-diagram.md
-│   ├── er-diagram.md
-│   ├── sequence-diagram.md
-│   ├── use-case.md
-│   └── workflow.md
-├── screenshots/
-│   ├── 01-book-management.png
-│   ├── 02-issue-return.png
-│   ├── 03-member-reports.png
-│   └── corresponding .txt transcripts
-└── src/
-    ├── main/java/com/library/
-    │   ├── Main.java
-    │   ├── database/DatabaseConnection.java
-    │   ├── model/{Book,Member,IssueRecord,User}.java
-    │   ├── dao/{BookDAO,MemberDAO,IssueDAO}.java
-    │   ├── service/{AuthService,BookService,MemberService,IssueService,ReportService}.java
-    │   └── util/{InputValidator,FineCalculator}.java
-    └── test/java/com/library/
-        └── FineCalculatorTest.java
-```
-
-## 16. Error Handling and Validation
+## 15. Error Handling and Validation
 
 The application validates user input before performing operations. Examples include:
 
@@ -442,7 +392,7 @@ Errors are displayed in the command line so the application can continue running
 
 ---
 
-## 17. Fine Calculation Rules
+## 16. Fine Calculation Rules
 
 The fine calculation is handled by `FineCalculator`.
 
@@ -458,37 +408,7 @@ If return date > due date:
 
 The included smoke test uses a daily rate of `5` for its late-return example.
 
----
-
-## 18. Execution Evidence
-
-The repository includes evidence generated from an actual local execution of the project using **OpenJDK 21**.
-
-### Screenshot 1 — Book Management
-
-` screenshots/01-book-management.png `
-
-Demonstrates successful administrator login and listing of the seeded books.
-
-### Screenshot 2 — Issue and Return
-
-` screenshots/02-issue-return.png `
-
-Demonstrates issuing a book to a member and displaying the resulting active loan and due date.
-
-### Screenshot 3 — Member Management and Reports
-
-` screenshots/03-member-reports.png `
-
-Demonstrates member creation and the library summary report.
-
-The `.txt` files beside the screenshots contain the captured terminal transcripts used to generate the evidence images.
-
-The completed `Project_Report.pdf` includes the execution screenshots and testing results.
-
----
-
-## 19. Documentation
+## 18. Documentation
 
 Additional documentation is available in the `docs/` directory:
 
@@ -503,7 +423,7 @@ These documents explain the system from functional, structural, and interaction 
 
 ---
 
-## 20. Known Limitations
+## 19. Known Limitations
 
 This is an academic command-line application rather than a production library platform. Current limitations include:
 
@@ -519,7 +439,7 @@ This is an academic command-line application rather than a production library pl
 
 ---
 
-## 21. Possible Future Enhancements
+## 20. Possible Future Enhancements
 
 The system could be extended with:
 
